@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-
+/* 
 // Create result table
 function createFlexMessage(selectedItems) {
   const tableHtml = `
@@ -47,6 +47,53 @@ function createFlexMessage(selectedItems) {
         </table>
       `;
   return tableHtml;
+}
+ */
+
+function createFlexMessage(selectedItems) {
+  const header = {
+    type: 'box',
+    layout: 'horizontal',
+    contents: [
+      {
+        type: 'text',
+        text: '項目名稱',
+        weight: 'bold',
+        size: 'sm',
+        color: '#1DB446',
+        align: 'center',
+      },
+    ],
+  };
+
+  const rows = selectedItems.map((item) => ({
+    type: 'box',
+    layout: 'horizontal',
+    contents: [
+      {
+        type: 'text',
+        text: item,
+        size: 'sm',
+        color: '#555555',
+        align: 'center',
+      },
+    ],
+  }));
+
+  return [
+    {
+      type: 'flex',
+      altText: 'Selected Items',
+      contents: {
+        type: 'bubble',
+        body: {
+          type: 'box',
+          layout: 'vertical',
+          contents: [header, ...rows],
+        },
+      },
+    },
+  ];
 }
 
 function callTutu() {
