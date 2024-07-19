@@ -57,7 +57,7 @@ function createFlexMessage(selectedItems) {
     contents: [
       {
         type: 'text',
-        text: '項目名稱',
+        text: '大小姐的必做清單',
         weight: 'bold',
         size: 'sm',
         color: '#1DB446',
@@ -69,6 +69,7 @@ function createFlexMessage(selectedItems) {
   const rows = selectedItems.map((item) => ({
     type: 'box',
     layout: 'horizontal',
+    margin: 'md', // 調整這裡的間隔
     contents: [
       {
         type: 'text',
@@ -89,13 +90,13 @@ function createFlexMessage(selectedItems) {
         body: {
           type: 'box',
           layout: 'vertical',
+          spacing: 'md', // 調整這裡的間隔
           contents: [header, ...rows],
         },
       },
     },
   ];
 }
-
 function logToPage(message) {
   const logDiv = document.getElementById('log');
   const logMessage = document.createElement('div');
