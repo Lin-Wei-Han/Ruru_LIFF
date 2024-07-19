@@ -95,10 +95,12 @@
         .then(() => {
           // 初始化成功後的處理
           console.log('LIFF initialized successfully');
+          logToPage(`LIFF initialized successfully`);
         })
         .catch((err) => {
           // 初始化失敗的處理
           console.error('LIFF initialization failed', err);
+          logToPage(`LIFF initialized failed`);
         });
     });
   </script>
