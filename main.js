@@ -96,6 +96,13 @@ function createFlexMessage(selectedItems) {
   ];
 }
 
+function logToPage(message) {
+  const logDiv = document.getElementById('log');
+  const logMessage = document.createElement('div');
+  logMessage.textContent = message;
+  logDiv.appendChild(logMessage);
+}
+
 function callTutu() {
   const activeCards = document.querySelectorAll('.service-card.active');
   const selectedItems = Array.from(activeCards).map((card) => {
@@ -111,6 +118,7 @@ function callTutu() {
       liff.closeWindow();
     })
     .catch((err) => {
+      logToPage(`Error sending message: ${err.code}, ${err.message}`);
       console.error(err.code, err.message);
     });
   // 在這裡處理選擇的項目列表
