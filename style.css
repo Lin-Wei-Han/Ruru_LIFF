@@ -1,0 +1,196 @@
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: rgb(26, 26, 26);
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #c9c9c9;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f1f1f1;
+}
+
+main {
+  max-width: 420px;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.section-header {
+  margin: 20px 30px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.tutu {
+  color: rgb(211, 118, 134);
+}
+
+.ruru {
+  color: rgb(153, 106, 45);
+}
+
+.banner {
+  height: 230px;
+  margin: 0 10px;
+  border-radius: 15px;
+  background-image: url('./image/3.png');
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.section-service {
+  margin: 20px 10px;
+}
+
+.service-title {
+  text-align: left;
+  margin: 0 5px;
+}
+
+.service-card {
+  display: grid;
+  grid-template-columns: 30fr 70fr;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in;
+}
+
+.service-card.active {
+  box-shadow: inset 0 0 0 2px rgb(108, 218, 114);
+  transition: all 0.3s ease-in;
+}
+
+.card-title {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+}
+
+.card-description {
+  font-size: 14px;
+}
+
+.card-content {
+  margin: 0 40px 0 5px;
+}
+
+.card-img {
+  margin: 8px;
+  height: 80px;
+  border-radius: 12px;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.dot-car,
+.dot-cookie,
+.dot-hug,
+.dot-play,
+.dot-touch {
+  display: none;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  right: 10px;
+  top: 10px;
+  border-radius: 50%;
+  font-size: 14px;
+  text-align: center;
+  color: #ffffff;
+  background-color: rgb(108, 218, 114);
+}
+
+.car {
+  background-image: url('./image/car.jpg');
+}
+
+.cookie {
+  background-image: url('./image/cookie.webp');
+}
+
+.hug {
+  background-image: url('./image/hug.jpg');
+}
+
+.play {
+  background-image: url('./image/play.jpg');
+}
+
+.touch {
+  background-image: url('./image/touch.png');
+}
+
+.section-footer {
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+.footer-text {
+  text-align: center;
+}
+
+.submit-btn {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%; /* 使寬度隨容器寬度縮放 */
+  max-width: 400px; /* 最大寬度限制為300px */
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+  display: none;
+}
+
+.btn-submit {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  background: rgb(94, 79, 60);
+  cursor: pointer;
+}
+
+.order-amount {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  border-radius: 8px;
+  width: 28px;
+  height: 28px;
+  transform: translateY(-50%);
+  font-weight: 700;
+  text-align: center;
+  align-content: center;
+  color: rgb(94, 79, 60);
+  background-color: white;
+}

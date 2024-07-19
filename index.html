@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>兔兔呼叫系統</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- 引入 jQuery 庫 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="section-header">
+        <h1 class="title">
+          What Do <span class="sub-title tutu">TUTU</span> Need Today？
+        </h1>
+      </div>
+      <div class="banner"></div>
+      <div class="section-service">
+        <h1 class="service-title">
+          Enjoy <span class="sub-title ruru">RURU</span> Now！
+        </h1>
+        <div class="service-card">
+          <div class="card-img car"></div>
+          <div class="card-content">
+            <h3 class="card-title">宅急鹿</h3>
+            <div class="card-description">
+              鹿鹿衝刺，趕往兔兔巢穴。15至20分鐘內使命必達。
+            </div>
+          </div>
+          <div class="dot-car">✔</div>
+        </div>
+        <div class="service-card">
+          <div class="card-img cookie"></div>
+          <div class="card-content">
+            <h3 class="card-title">零食魔法</h3>
+            <div class="card-description">
+              小狗吃飽專屬技能。變出餅乾糖果，餵飽兔子。
+            </div>
+          </div>
+          <div class="dot-cookie">✔</div>
+        </div>
+        <div class="service-card">
+          <div class="card-img hug"></div>
+          <div class="card-content">
+            <h3 class="card-title">抱緊處理</h3>
+            <div class="card-description">
+              關心小狗心理狀態，聽聽就好，這邊主要提供抱抱。
+            </div>
+          </div>
+          <div class="dot-hug">✔</div>
+        </div>
+        <div class="service-card">
+          <div class="card-img play"></div>
+          <div class="card-content">
+            <h3 class="card-title">小狗郊遊</h3>
+            <div class="card-description">
+              該出門走走了。陪小白狗去想去的地方。
+            </div>
+          </div>
+          <div class="dot-play">✔</div>
+        </div>
+        <div class="service-card">
+          <div class="card-img touch"></div>
+          <div class="card-content">
+            <h3 class="card-title">蹭一下</h3>
+            <div class="card-description">
+              無處發現的小白狗，需要用力的蹭一下。
+            </div>
+          </div>
+          <div class="dot-touch">✔</div>
+        </div>
+      </div>
+      <div class="section-footer">
+        <p class="footer-text">Copyright © 2024 RURU All rights reserved.</p>
+      </div>
+      <div class="submit-btn">
+        <button class="btn-submit" onclick="callTutu()">Submit</button>
+        <span class="order-amount">0</span>
+      </div>
+    </main>
+  </body>
+  <script>
+    $(document).ready(function () {
+      liff
+        .init({
+          liffId: '2005884551-MWrGGypm',
+        })
+        .then(() => {
+          // 初始化成功後的處理
+          console.log('LIFF initialized successfully');
+        })
+        .catch((err) => {
+          // 初始化失敗的處理
+          console.error('LIFF initialization failed', err);
+        });
+    });
+  </script>
+  <script src="./main.js"></script>
+</html>
